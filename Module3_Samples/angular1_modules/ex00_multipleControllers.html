@@ -1,0 +1,19 @@
+<div ng-app='app'>
+    <div ng-controller='ItemController'>
+        	<h1>Your Orders</h1>
+
+        <div ng-repeat='item in items'>	<span>{{item.title}}</span>
+
+            <input type="text" ng-model="item.quantity"><span>{{item.price |
+				currency}}</span>&nbsp;|&nbsp;<span>{{item.price *
+				item.quantity | currency}}</span>
+
+        </div>
+    </div>
+    <hr/>
+    <div ng-controller='TextController'>Enter a text::
+        <input ng-model='text.message'>
+         <h2>{{text.message}}, Journey just started!</h2>
+
+    </div>
+</div>
